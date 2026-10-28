@@ -1,5 +1,5 @@
 // Configuración básica del cálculo de honorarios
-const COSTO_BASE_UNIDAD = 9000; 
+const COSTO_BASE_UNIDAD = 20000; 
 
 const FACTORES = {
   'simple': 1.0,
@@ -7,10 +7,18 @@ const FACTORES = {
   'completo': 1.35
 };
 
+// 🗺️ Diccionario para traducir los valores del select a texto legible
+const NOMBRES_TIPOS = {
+  'simple': 'Estándar (sin amenities ni personal fijo)',
+  'con-encargado': 'Con Encargado / Portería',
+  'completo': 'Con Amenities (Pileta, SUM, Seguridad)'
+};
+
+
 // ⚠️ IMPORTANTE: Ingresa el número de WhatsApp de María Laura aquí.
 // Formato Argentina: 549 + código de área sin 0 + número sin 15.
 // Ejemplo para CABA/AMBA (11 1234-5678) -> "5491112345678"
-const NUMERO_WHATSAPP = "5491112345678"; 
+const NUMERO_WHATSAPP = "5491165708428"; 
 
 const form = document.getElementById('form-cotizar');
 const resultadoBox = document.getElementById('resultado-cotizacion');
