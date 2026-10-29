@@ -74,40 +74,54 @@
             </div>
         </section>
 
-        <!-- Cotizador de Honorarios -->
-        <section id="cotizador">
-            <div class="cotizador-card">
-                <div class="section-title" style="margin-bottom: 20px;">
-                    <h2>Calculá una estimación para tu edificio</h2>
-                    <p>Obtené un valor de referencia al instante</p>
-                </div>
+        <!-- Formulario de Relevamiento / Cotización -->
+<section id="cotizador">
+  <div class="cotizador-card">
+    <div class="section-title" style="margin-bottom: 20px;">
+      <h2>Solicitá un Presupuesto para tu Edificio</h2>
+      <p>Completá las características del consorcio para enviarnos la consulta por WhatsApp</p>
+    </div>
 
-                <form id="form-cotizar">
-                    <div class="form-group">
-                        <label for="unidades">Cantidad de unidades / departamentos</label>
-                        <input type="number" id="unidades" min="1" placeholder="Ej: 18" required>
-                    </div>
+    <form id="form-cotizar">
+      <div class="form-group">
+        <label for="unidades">Cantidad de Unidades Funcionales (Deptos / Locales)</label>
+        <input type="number" id="unidades" min="1" placeholder="Ej: 24" required>
+      </div>
 
-                    <div class="form-group">
-                        <label for="caracteristicas">Características del consorcio</label>
-                        <select id="caracteristicas">
-                            <option value="simple">Estándar (sin amenities ni personal fijo)</option>
-                            <option value="con-encargado">Con Encargado / Portería</option>
-                            <option value="completo">Con Amenities (Pileta, SUM, Seguridad)</option>
-                        </select>
-                    </div>
+      <div class="form-group">
+        <label for="cocheras">Cantidad de Cocheras</label>
+        <input type="number" id="cocheras" min="0" placeholder="Ej: 10" value="0">
+      </div>
 
-                    <button type="submit" class="btn-main" style="width: 100%;">Calcular Presupuesto Estimado</button>
-                </form>
+      <div class="form-group">
+        <label for="ascensores">Cantidad de Ascensores</label>
+        <input type="number" id="ascensores" min="0" placeholder="Ej: 2" value="0">
+      </div>
 
-                <div id="resultado-cotizacion" class="resultado-box" aria-live="polite">
-                    <span style="font-size:0.9rem; color: var(--text-muted);">Honorario mensual estimado:</span>
-                    <strong id="monto-final">$0</strong>
-                    
-                    <button type="button" id="btn-envio-ws" class="btn-whatsapp">💬 Enviar consulta a María Laura por WhatsApp</button>
-                </div>
-            </div>
-        </section>
+      <div class="form-group">
+        <label for="categoria">Categoría del edificio</label>
+        <select id="categoria">
+          <option value="Estándar / Sencillo">Estándar / Sencillo</option>
+          <option value="Con Encargado / Portería">Con Encargado / Portería</option>
+          <option value="Con Amenities (Pileta, SUM, Seguridad)">Con Amenities (Pileta, SUM, Seguridad)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="antiguedad">Antigüedad del inmueble</label>
+        <select id="antiguedad">
+          <option value="A estrenar (0 a 2 años)">A estrenar (0 a 2 años)</option>
+          <option value="Hasta 15 años">Hasta 15 años</option>
+          <option value="Más de 15 años">Más de 15 años</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-whatsapp" style="width: 100%; margin-top: 15px;">
+        💬 Enviar consulta a María Laura por WhatsApp
+      </button>
+    </form>
+  </div>
+</section>
 
     </main>
 
